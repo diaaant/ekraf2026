@@ -1,0 +1,50 @@
+// 38 provinsi Indonesia. `lat`/`lon` adalah titik perkiraan untuk peta sebaran.
+export const provinces = [
+  { code: "ACEH", name: "Aceh", lat: 4.7, lon: 96.7 },
+  { code: "SUMUT", name: "Sumatera Utara", lat: 2.1, lon: 99.5 },
+  { code: "SUMBAR", name: "Sumatera Barat", lat: -0.9, lon: 100.4 },
+  { code: "RIAU", name: "Riau", lat: 0.5, lon: 101.5 },
+  { code: "KEPRI", name: "Kepulauan Riau", lat: 1.0, lon: 104.5 },
+  { code: "JAMBI", name: "Jambi", lat: -1.6, lon: 103.6 },
+  { code: "SUMSEL", name: "Sumatera Selatan", lat: -3.3, lon: 104.2 },
+  { code: "BABEL", name: "Kepulauan Bangka Belitung", lat: -2.7, lon: 106.5 },
+  { code: "BENGKULU", name: "Bengkulu", lat: -3.8, lon: 102.3 },
+  { code: "LAMPUNG", name: "Lampung", lat: -4.9, lon: 105.0 },
+  { code: "DKI", name: "DKI Jakarta", lat: -6.2, lon: 106.8 },
+  { code: "JABAR", name: "Jawa Barat", lat: -6.9, lon: 107.6 },
+  { code: "BANTEN", name: "Banten", lat: -6.4, lon: 106.1 },
+  { code: "JATENG", name: "Jawa Tengah", lat: -7.2, lon: 110.2 },
+  { code: "JOGJA", name: "DI Yogyakarta", lat: -7.9, lon: 110.4 },
+  { code: "JATIM", name: "Jawa Timur", lat: -7.8, lon: 112.5 },
+  { code: "BALI", name: "Bali", lat: -8.4, lon: 115.2 },
+  { code: "NTB", name: "Nusa Tenggara Barat", lat: -8.6, lon: 117.4 },
+  { code: "NTT", name: "Nusa Tenggara Timur", lat: -9.9, lon: 122.0 },
+  { code: "KALBAR", name: "Kalimantan Barat", lat: 0.0, lon: 110.5 },
+  { code: "KALTENG", name: "Kalimantan Tengah", lat: -1.7, lon: 113.4 },
+  { code: "KALSEL", name: "Kalimantan Selatan", lat: -3.0, lon: 115.3 },
+  { code: "KALTIM", name: "Kalimantan Timur", lat: 0.5, lon: 116.4 },
+  { code: "KALTARA", name: "Kalimantan Utara", lat: 3.1, lon: 116.0 },
+  { code: "SULUT", name: "Sulawesi Utara", lat: 1.0, lon: 124.8 },
+  { code: "GORONTALO", name: "Gorontalo", lat: 0.7, lon: 122.4 },
+  { code: "SULTENG", name: "Sulawesi Tengah", lat: -1.4, lon: 121.4 },
+  { code: "SULBAR", name: "Sulawesi Barat", lat: -2.5, lon: 119.3 },
+  { code: "SULSEL", name: "Sulawesi Selatan", lat: -3.7, lon: 120.0 },
+  { code: "SULTRA", name: "Sulawesi Tenggara", lat: -4.1, lon: 122.1 },
+  { code: "MALUKU", name: "Maluku", lat: -3.2, lon: 129.0 },
+  { code: "MALUT", name: "Maluku Utara", lat: 1.6, lon: 127.8 },
+  { code: "PAPBAR", name: "Papua Barat", lat: -1.3, lon: 133.0 },
+  { code: "PBD", name: "Papua Barat Daya", lat: -1.1, lon: 131.3 },
+  { code: "PAPUA", name: "Papua", lat: -3.5, lon: 138.3 },
+  { code: "PAPSEL", name: "Papua Selatan", lat: -7.5, lon: 139.5 },
+  { code: "PAPTENG", name: "Papua Tengah", lat: -3.8, lon: 136.0 },
+  { code: "PAPEG", name: "Papua Pegunungan", lat: -4.0, lon: 139.0 },
+];
+
+export const subsectors = ["Kriya", "Fesyen", "Seni Rupa"];
+
+// Motif visual yang dipakai untuk tiap subsektor.
+export const patternBySubsector = {
+  Kriya: "ulos",
+  Fesyen: "batik",
+  "Seni Rupa": "ukiran",
+};

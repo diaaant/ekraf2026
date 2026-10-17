@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --color-ivory: #fbf7ee;
+  --color-sand: #f3ead7;
+  --color-ink-900: #2a1d15;
+  --color-ink-700: #4a382c;
+  --color-ink-500: #7a6656;
+  --color-ink-300: #cdbfae;
+  --color-gold-100: #fbf0cf;
+  --color-gold-300: #f3d98b;
+  --color-gold-500: #c8962e;
+  --color-gold-700: #8a6417;
+  --color-ulos-700: #8f1d21;
+  --color-leaf-600: #1f6b4f;
+  --color-leaf-100: #dff1e8;
+}
+
+@layer base {
+  button,
+  a,
+  [role="button"],
+  select,
+  label[for],
+  summary {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold-500);
+    outline-offset: 2px;
+  }
+}
+
+/* ---- Animasi sertifikat emas ---- */
+@keyframes cert-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96) rotateX(8deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotateX(0);
+  }
+}
+
+@keyframes cert-shimmer {
+  0% {
+    transform: translateX(-120%) skewX(-18deg);
+  }
+  100% {
+    transform: translateX(260%) skewX(-18deg);
+  }
+}
+
+@keyframes seal-stamp {
+  0% {
+    opacity: 0;
+    transform: scale(2.4) rotate(-24deg);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(0.92) rotate(4deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes pin-pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+.cert-reveal {
+  animation: cert-reveal 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.cert-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 40%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  animation: cert-shimmer 2.8s ease-in-out 0.9s 2;
+  pointer-events: none;
+}
+
+.seal-stamp {
+  animation: seal-stamp 0.7s cubic-bezier(0.3, 1.4, 0.5, 1) 0.8s both;
+}
+
+.pin-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pin-pulse 2.2s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cert-reveal,
+  .seal-stamp,
+  .pin-pulse {
+    animation: none;
+  }
+
+  .cert-shimmer::after {
+    animation: none;
+    display: none;
+  }
+}
